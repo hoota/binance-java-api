@@ -89,12 +89,12 @@ public interface BinanceApiRestClient {
    * @param endTime Timestamp in ms to get aggregate trades until INCLUSIVE (optional).
    * @return a list of aggregate trades for the given symbol
    */
-  List<AggTrade> getAggTrades(String symbol, String fromId, Integer limit, Long startTime, Long endTime);
+  List<AggTrade> getAggTrades(String symbol, Long fromId, Integer limit, Long startTime, Long endTime);
 
   /**
    * Return the most recent aggregate trades for <code>symbol</code>
    *
-   * @see #getAggTrades(String, String, Integer, Long, Long)
+   * @see #getAggTrades(String, Long, Integer, Long, Long)
    */
   List<AggTrade> getAggTrades(String symbol);
 
