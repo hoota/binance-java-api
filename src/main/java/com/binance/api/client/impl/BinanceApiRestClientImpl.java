@@ -75,7 +75,7 @@ public class BinanceApiRestClientImpl implements BinanceApiRestClient {
   }
 
   @Override
-  public List<AggTrade> getAggTrades(String symbol, String fromId, Integer limit, Long startTime, Long endTime) {
+  public List<AggTrade> getAggTrades(String symbol, Long fromId, Integer limit, Long startTime, Long endTime) {
     return executeSync(binanceApiService.getAggTrades(symbol, fromId, limit, startTime, endTime));
   }
 

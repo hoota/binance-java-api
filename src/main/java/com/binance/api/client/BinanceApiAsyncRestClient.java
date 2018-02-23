@@ -73,12 +73,12 @@ public interface BinanceApiAsyncRestClient {
    * @param callback the callback that handles the response
    * @return a list of aggregate trades for the given symbol
    */
-  void getAggTrades(String symbol, String fromId, Integer limit, Long startTime, Long endTime, BinanceApiCallback<List<AggTrade>> callback);
+  void getAggTrades(String symbol, Long fromId, Integer limit, Long startTime, Long endTime, BinanceApiCallback<List<AggTrade>> callback);
 
   /**
    * Return the most recent aggregate trades for <code>symbol</code>
    *
-   * @see #getAggTrades(String, String, Integer, Long, Long, BinanceApiCallback)
+   * @see #getAggTrades(String, Long, Integer, Long, Long, BinanceApiCallback)
    */
   void getAggTrades(String symbol, BinanceApiCallback<List<AggTrade>> callback);
 
