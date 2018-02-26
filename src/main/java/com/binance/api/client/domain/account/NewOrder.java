@@ -57,6 +57,11 @@ public class NewOrder {
   private String icebergQty;
 
   /**
+   * Set the response JSON. ACK, RESULT, or FULL; default: RESULT.
+   */
+  private NewOrderResponseType newOrderRespType = NewOrderResponseType.RESULT;
+
+  /**
    * Receiving window.
    */
   private Long recvWindow;
@@ -165,6 +170,15 @@ public class NewOrder {
 
   public NewOrder icebergQty(String icebergQty) {
     this.icebergQty = icebergQty;
+    return this;
+  }
+
+  public NewOrderResponseType getNewOrderRespType() {
+    return newOrderRespType;
+  }
+
+  public NewOrder newOrderRespType(NewOrderResponseType newOrderRespType) {
+    this.newOrderRespType = newOrderRespType;
     return this;
   }
 
